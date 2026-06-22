@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Casulo — Instrumento de Preferências Comportamentais">
+  <title>Casulo | Preferências Comportamentais</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Início">
+        <img class="brand-mark" src="assets/casulo-marca.jpg" alt="">
+        <span class="brand-name">Casulo</span>
+      </a>
+      <span class="header-label">Um espaço para se conhecer</span>
+    </header>
+
+    <main>
+      <section id="intro" class="screen intro-screen">
+        <div class="intro-copy">
+          <span class="eyebrow">Casulo · Autoconhecimento</span>
+          <h1>Descubra suas preferências comportamentais</h1>
+          <p class="lead">Responda a 30 situações do cotidiano e veja qual dos quatro temperamentos aparece com maior intensidade nas suas escolhas.</p>
+          <div class="feature-row" aria-label="Informações do teste">
+            <span><strong>30</strong> questões</span>
+            <span><strong>5–7</strong> minutos</span>
+            <span><strong>1</strong> escolha por questão</span>
+          </div>
+          <button id="start-button" class="primary-button" type="button">Começar o teste <span aria-hidden="true">→</span></button>
+          <p class="privacy-note">Suas respostas ficam somente neste dispositivo e não são enviadas a nenhum servidor.</p>
+        </div>
+        <div class="intro-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="brand-photo-wrap">
+            <img class="brand-photo" src="assets/casulo-marca.jpg" alt="">
+          </div>
+          <span class="floating-petal petal-one"></span>
+          <span class="floating-petal petal-two"></span>
+          <span class="floating-petal petal-three"></span>
+        </div>
+      </section>
+
+      <section id="quiz" class="screen quiz-screen" hidden>
+        <div class="quiz-topline">
+          <button id="back-button" class="text-button" type="button" aria-label="Voltar à questão anterior">← Voltar</button>
+          <span id="question-count">Questão 1 de 30</span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+        <div class="question-card">
+          <span class="eyebrow">Escolha a opção que mais se parece com você</span>
+          <h2 id="question-text"></h2>
+          <div id="answer-list" class="answer-list" role="radiogroup" aria-labelledby="question-text"></div>
+          <div class="quiz-actions">
+            <span id="selection-hint" aria-live="polite">Selecione uma alternativa para continuar.</span>
+            <button id="next-button" class="primary-button" type="button" disabled>Continuar <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="result" class="screen result-screen" hidden>
+        <div class="result-heading">
+          <span class="eyebrow">Seu resultado</span>
+          <h1 id="result-title"></h1>
+          <p id="result-summary" class="lead"></p>
+        </div>
+        <div class="result-grid">
+          <article class="result-card featured-card">
+            <span class="card-label">Perfil predominante</span>
+            <div id="result-icon" class="result-icon"></div>
+            <h2 id="profile-name"></h2>
+            <p id="profile-description"></p>
+            <div id="profile-tags" class="tag-list"></div>
+          </article>
+          <article class="result-card chart-card">
+            <span class="card-label">Distribuição das respostas</span>
+            <div id="score-chart" class="score-chart"></div>
+            <p class="chart-note">A soma dos percentuais corresponde às 30 respostas.</p>
+          </article>
+        </div>
+        <div class="result-note">
+          <strong>Como interpretar</strong>
+          <p>O resultado indica preferências percebidas neste momento. Ele não é diagnóstico psicológico nem determina sua personalidade de forma definitiva.</p>
+        </div>
+        <div class="result-actions">
+          <button id="restart-button" class="secondary-button" type="button">Refazer o teste</button>
+          <button id="print-button" class="primary-button" type="button">Imprimir resultado</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>Casulo · Instrumento de Preferências Comportamentais · Uso educativo e de autoconhecimento</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
